@@ -4,7 +4,7 @@ RUN apk update \
     && apk upgrade \
     && apk add certbot
 
-RUN mkdir -p /haproxy-crt /etc/letsencrypt/
+RUN mkdir -p /crt /haproxy-crt /etc/letsencrypt/
 
 ADD entrypoint.sh /entrypoint.sh
 ADD certbot-clean.sh /certbot-clean.sh
